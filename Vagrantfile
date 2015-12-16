@@ -15,6 +15,6 @@ Vagrant.configure("2") do |config|
     minion1.vm.hostname = "minion1"
     minion1.vm.network :private_network, ip: "10.0.0.11"
     minion1.vm.network :forwarded_port, guest: 80, host:8080
-    config.vm.provision "shell", path: "install-minion.sh webserver-1"
+    config.vm.provision "shell", path: "install-minion.sh", args: "webserver-1"
   end
 end

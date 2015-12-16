@@ -1,10 +1,14 @@
-pkg-present-python:
+python-essentials-pkgs:
   pkg.installed:
     - pkgs:
-      - python-boto
       - python-pip
+      - python-virtualenv
+      - python-boto
+      - python-tox
+      - python3-pip
+      - virtualenvwrapper
 
-tools-installed:
+tools-pkgs:
   pkg.installed:
     - pkgs:
       - htop

@@ -1,5 +1,5 @@
-add-apt-repository -y ppa:saltstack/salt
-aptitude update
+sh ./install-minion.sh salt-master
+
 aptitude install -y salt-master
 
 #permission to log
