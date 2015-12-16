@@ -1,5 +1,3 @@
-sh ./install-minion.sh salt-master
-
 aptitude install -y salt-master
 
 #permission to log

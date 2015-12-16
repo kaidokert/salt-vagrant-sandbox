@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
     master.vm.network :forwarded_port, guest: 4505, host: 4505
     master.vm.network :forwarded_port, guest: 4506, host: 4506
     master.vm.network :private_network, ip: "10.0.0.10"
+    config.vm.provision "shell", path: "install-minion.sh", args: "salt-master"
     config.vm.provision "shell", path: "install-master.sh"
   end
   config.vm.define :minion1 do |minion1|

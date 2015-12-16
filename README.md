@@ -1,10 +1,23 @@
 Salt master/minion boxes with ubuntu.
 Using gitfs as Salt root
 
-vagrant ssh master , sudo su ubuntu
+ssh into the master box
+`vagrant ssh master`
 
-salt-key -A # accept all keys
+change to work under ubuntu username
 
-salt '*' state.highstate # test install packages
+`sudo su ubuntu` #
 
-salt '*' pkg.list_upgrades && pkg.upgrade
+accept all keys
+
+`salt-key -A`
+
+test install packages
+
+`salt '*' state.highstate`
+
+Update out of date packages
+
+`salt '*' pkg.list_upgrades`
+
+`salt '*' pkg.upgrade`
