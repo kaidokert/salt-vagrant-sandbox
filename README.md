@@ -1,22 +1,24 @@
-Salt master/minion boxes with ubuntu.
-Using gitfs as Salt root
+Salt master/minion boxes with Ubuntu precise/trusty. Installs 2015.8 from official repos
+
+State and pillar is configured through both git and filesystem
+
+Bring up all three boxes
+
+`vagrant up`
 
 ssh into the master box
-`vagrant ssh master`
+
+`vagrant ssh`
 
 change to work under ubuntu username
 
-`sudo su ubuntu` #
+`sudo su ubuntu`
 
-accept all keys
-
-`salt-key -A`
-
-test install packages
+Test highstate
 
 `salt '*' state.highstate`
 
-Update out of date packages
+Do other things, like update out of date packages for instance
 
 `salt '*' pkg.list_upgrades`
 
